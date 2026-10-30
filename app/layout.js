@@ -1,16 +1,7 @@
-import { Space_Mono, Inter } from "next/font/google";
+import "@fontsource-variable/inter";
+import "@fontsource/space-mono/400.css";
+import "@fontsource/space-mono/700.css";
 import "./globals.css";
-
-const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Ahmad Raza | Frontend Developer",
@@ -25,10 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${spaceMono.variable} ${inter.variable} scroll-smooth`}
-    >
+    <html lang="en" className="scroll-smooth">
       <body className="bg-[#0a0a0a] text-white font-inter antialiased">
         {children}
       </body>
